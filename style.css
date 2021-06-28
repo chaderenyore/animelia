@@ -1,0 +1,253 @@
+* {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      color: white;
+}
+
+body {
+      background: #f4f4f4;
+      /*background: white;*/
+      display: grid;
+      grid-template-rows: auto fit-content(20rem);
+      grid-template-areas: "main"
+                            "footer";
+      padding-top: 4rem;
+      /* padding-top: 4.80rem; */
+}
+
+main {
+      grid-area: main;
+}
+
+#hero-section {
+      width: 100%;
+      height: 90vh;
+      background: linear-gradient(to bottom left, rgb(222, 161, 161, 0.3), rgb(222, 161, 161, 0.3)),  url("images/cinema-anime.jpg");
+      background-size: cover;
+      background-position: top right;
+      background-repeat: no-repeat;
+      position: relative;
+      padding-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr ;
+      grid-template-rows: 1fr 1fr 1fr;
+      justify-items: center;
+}
+
+.hero-text__div {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      align-self: end;
+}
+
+
+.hero--cta__div {
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      align-self: center;
+}
+
+.hero--expo__div {
+      grid-column-start: 1;
+      grid-column-end: 3;
+}
+
+.hero-buttons {
+      background: #c46d6d;
+      padding: 12px 15px;
+      text-decoration: none;
+      font-weight: bold;
+}
+
+@media  (min-width: 44.625rem) {
+      #hero-section {
+            grid-template-rows: 1fr 1fr;
+      }
+
+      .hero-text__div {
+            align-self: center;
+      }
+
+      .hero--cta__div {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            align-self: unset;
+      }
+
+      .hero--expo__div {
+            grid-column-start: unset;
+            grid-column-end: unset;
+      }
+}
+
+.choose-animelia {
+      margin-top: 90px;
+      width: 100%;
+      padding-bottom: 33px;
+}
+
+.choose-animelia h1 {
+      text-align: center;
+      color: #C95F80;
+}
+
+.reason-one {
+      padding: 22px  35px 0 35px;
+      display: flex;
+      width: 80%;
+      margin: auto;
+}
+
+.reason-one .img-div {
+      background: url("images/drawn-anime.jpg") no-repeat;
+      background-size: cover;
+      background-position: bottom 50% left 50%;
+      height: 15rem;
+      width: 40%;
+}
+
+.reason-one p {
+      color: #C95F80;
+      font-size: 24px;
+      margin: 5px 14px;
+      width: 60%;
+      align-self: center;
+}
+
+.reason-two {
+      display: flex;
+      flex-direction: row-reverse;
+      padding: 22px  35px 0 35px;
+      width: 80%;
+      margin: auto;
+}
+
+.reason-two .img-div {
+      background: url("images/girl-anime.jpg") no-repeat;
+      background-size: cover;
+      background-position: bottom 50% left 50%;
+      height: 15rem;
+      width: 40%;
+}
+
+.reason-two p {
+      color: #C95F80;
+      font-size: 24px;
+      margin: 5px 14px;
+      width: 60%;
+      align-self: center;
+}
+
+@media (max-width: 61.875rem) {
+      .reason-one {
+            width: 100%;
+            margin: 0;
+      }
+
+      .reason-two {
+            width: 100%;
+            margin: 0;
+      }
+
+      .reason-two p,
+      .reason-one p {
+            font-size: 18px;
+      }
+}
+
+@media (max-width: 527px) {
+      .reason-two,
+      .reason-one {
+            flex-direction: column;
+            margin: 0 !important;
+      }
+
+      .reason-one .img-div,
+      .reason-two .img-div {
+            width: 100%;
+            margin: 0 !important;
+
+      }
+
+      .reason-one p,
+      .reason-two p {
+            margin: 10px 0;
+            width: 100%;
+            align-self: stretch;
+      }
+}
+
+.customer-showoff {
+      width: 100%;
+      height: 400px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+}
+
+.customer-box {
+      background: #f7f0f0;
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      box-shadow: 0 0 35px 15px rgba(125, 125, 125, 0.3);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 32px;
+      padding-right: 32px;
+      padding-bottom: 32px;
+      position: relative;
+      overflow: hidden;
+}
+
+.customer-count {
+      color: #c95f80;
+      font-size: 24px;
+      align-self: center;
+      margin: 30px;
+}
+
+.customer-svgs {
+      display: grid;
+      grid-template-columns: repeat(6, auto);
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+}
+
+.svg {
+      padding: 0 0.9rem;
+}
+
+
+@media (max-width: 57rem) {
+      .customer-svgs {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-column-gap: 15px;
+      }
+
+      .customer-svgs .will-crop {
+            display: none;
+      }
+
+      .svg {
+            padding: 10px 0;
+      }
+
+      .customer-count {
+            font-size: 20px;
+      }
+}
+
+@media (max-width: 28.0625rem) {
+      .customer-svgs {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+      }
+}
