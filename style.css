@@ -60,6 +60,12 @@ main {
       padding: 12px 15px;
       text-decoration: none;
       font-weight: bold;
+      transition: padding 400ms cubic-bezier(.19,1,.22,1);
+}
+
+.hero-buttons:hover,
+.hero-buttons:active {
+      padding: 16px 18px;
 }
 
 @media  (min-width: 44.625rem) {
