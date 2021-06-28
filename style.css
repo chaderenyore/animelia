@@ -64,7 +64,8 @@ main {
 }
 
 .hero-buttons:hover,
-.hero-buttons:active {
+.hero-buttons:active,
+.hero-buttons:focus {
       padding: 16px 18px;
 }
 
