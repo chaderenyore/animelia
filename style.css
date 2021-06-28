@@ -73,6 +73,10 @@ main {
             grid-template-rows: 1fr 1fr;
       }
 
+      .hero-text {
+            font-size: 1.8rem;
+      }
+
       .hero-text__div {
             align-self: center;
       }
